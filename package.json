@@ -1,0 +1,26 @@
+{
+  "name": "archived-docs-killer-mongodb",
+  "version": "1.0.0",
+  "description": "A MongoDB app that quickly removes no longer needed documents, freeing up storage space and making your database more efficient.\"",
+  "main": "eraser.js",
+  "dependencies": {
+    "mongodb": "^4.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonGR/ArchivedDocsKiller.git"
+  },
+  "keywords": [
+    "mongodb",
+    "eraser"
+  ],
+  "author": "Alex Tsanis",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/dragonGR/ArchivedDocsKiller/issues"
+  },
+  "homepage": "https://github.com/dragonGR/ArchivedDocsKiller#readme"
+}
