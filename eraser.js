@@ -1,4 +1,4 @@
-// This code is a node.js script that connects to a MongoDB database and deletes documents from the "products" collection
+// This code is a node.js script that connects to a MongoDB database and deletes documents from the given collection
 // that have a "createdAt" value less than yesterday's date (set to midnight).
 
 // Import the MongoClient module from the mongodb library and create a URI
@@ -12,10 +12,10 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 client.connect(err => {
   if (err) throw err;
 
-// Get the 'harold' database from the MongoDB server
+// Get the given database from the MongoDB server
   const db = client.db('John');
 
-// Get the 'products' collection from the 'harold' database
+// Get the given collection from the given database
   const products = db.collection('Connor');
 
 // Create a date object for yesterday's date
@@ -23,7 +23,7 @@ client.connect(err => {
   yesterday.setDate(yesterday.getDate() - 0);
   yesterday.setHours(0, 0, 0, 0);
 
-// Delete all documents from the 'products' collection that have a "createdAt" value less than yesterday's date
+// Delete all documents from the given collection that have a "createdAt" value less than yesterday's date
   products.deleteMany({ createdAt: { $lt: yesterday } }, (err, result) => {
 
 // If there's an error, throw it
